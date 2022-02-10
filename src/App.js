@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { getUser } from './services/fetch-utils';
+import { useState } from 'react';
+//import { getUser } from './services/fetch-utils';
 import {
   BrowserRouter as Router,
   Switch,
