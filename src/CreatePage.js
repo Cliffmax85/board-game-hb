@@ -40,17 +40,17 @@ export default function CreatePage() {
   return (
     <div className='create'>
       {/* on submit, call your handleSubmit function */}
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2>Add board game</h2>
         <label>
             Title
           {/* on change, set the title in state */}
-          <input required name='title' />
+          <input value={title} onChange={e => setTitle(e.target.value)} required name='title' />
         </label>
         <label>
             Genre
           {/* on change, set the genre in state */}
-          <select required>
+          <select required value={genre} onChange={e => setGenre(e.target.value)}>
             <option>Tile-laying</option>
             <option>Economic</option>
             <option>War</option>
@@ -63,22 +63,22 @@ export default function CreatePage() {
         <label>
             Designer
           {/* on change, set the designer in state */}
-          <input required name='designer' />
+          <input required value={designer} onChange={e => setDesigner(e.target.value)} name='designer' />
         </label>
         <label>
             Min Players
           {/* on change, set the min players in state */}
-          <input required name='min_players' />
+          <input required value={minPlayers} onChange={e => setMinPlayers(e.target.value)} name='min_players' />
         </label>
         <label>
             Max Players
           {/* on change, set the max players in state */}
-          <input required name='max_players' />
+          <input required value={maxPlayers} onChange={e => setMaxPlayers(e.target.value)} name='max_players' />
         </label>
         <label>
             Description
           {/* on change, set the description in state */}
-          <textarea required name='max_players' />
+          <textarea required value={description} onChange={e => setDiscription(e.target.value)} name='description' />
         </label>
         <button>Create game</button>
       </form>
